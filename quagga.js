@@ -21,7 +21,7 @@ Quagga.init({
       console.error('Error initializing Quagga', err);
       return;
     }
-    console.log('Quagga initialized');
+    alert('Quagga initialized');
     
     // Start the scanner when the video stream is ready
     video.addEventListener('canplay', function() {
@@ -30,7 +30,7 @@ Quagga.init({
     
     // Listen for barcode scans
     Quagga.onDetected(function(result) {
-      console.log('Barcode detected', result.codeResult.code);
+      alert('Barcode detected', result.codeResult.code);
     });
   });
   
